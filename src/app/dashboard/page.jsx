@@ -200,14 +200,14 @@ export default function Dashboard() {
       <StylesHeader>
       <StylesUserName>{user.name}</StylesUserName>
      
-        <StylesAddButton onClick={() => setShowModal(true)}>
-           Adicionar
-        </StylesAddButton>
+        
 
         <div style={{ display: 'flex', alignItems: 'center' }}>
           <StylesUserInfo>
            
-            <StylesUserEmail>{user.email}</StylesUserEmail>
+            <StylesAddButton onClick={() => setShowModal(true)}>
+           Adicionar
+        </StylesAddButton>
           </StylesUserInfo>
           <StylesLogoutButton onClick={handleLogout}>
             Sair
@@ -242,13 +242,12 @@ export default function Dashboard() {
         
 
         <StylesActivitiesList>
-          <StylesActivitiesTitle>Últimas Atividades</StylesActivitiesTitle>
+          <StylesActivitiesTitle>Todas as Atividades</StylesActivitiesTitle>
           {transactions.length === 0 ? (
             <StylesNoActivities>Nenhuma atividade registrada</StylesNoActivities>
           ) : (
             transactions
               .sort((a, b) => new Date(b.date) - new Date(a.date))
-              .slice(0, 5)
               .map(transaction => (
                 <StylesActivityItem key={transaction.id}>
                   {editingTransaction?.id === transaction.id ? (
@@ -329,7 +328,7 @@ export default function Dashboard() {
           <StylesModal>
             <StylesModalContent>
               <StylesModalHeader>
-                <h2>Adicionar Transação</h2>
+                <h2>Adicionar</h2>
                 <StylesModalClose onClick={() => setShowModal(false)}>
                   ×
                 </StylesModalClose>
@@ -341,7 +340,7 @@ export default function Dashboard() {
                   value={formData.type}
                   onChange={handleChange}
                 >
-                  <option value="receita">Receita</option>
+                  <option value="receita">Entradas</option>
                   <option value="gasto">Gasto</option>
                 </StylesModalSelect>
 
