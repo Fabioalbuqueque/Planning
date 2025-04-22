@@ -31,7 +31,7 @@ export const StylesTitle = styled.h1`
 export const StylesInput = styled.input`
   padding: 0.75rem;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 50px;
   font-size: 1rem;
   width: 100%;
 
@@ -46,7 +46,7 @@ export const StylesButton = styled.button`
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 50px;
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s;
