@@ -199,7 +199,7 @@ export default function Dashboard() {
     <StylesMain>
       <StylesHeader>
       <StylesUserName>{user.name}</StylesUserName>
-     
+      
         
 
         <div style={{ display: 'flex', alignItems: 'center' }}>
