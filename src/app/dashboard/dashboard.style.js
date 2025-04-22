@@ -69,13 +69,14 @@ export const StylesSummaryCards = styled.div`
 
 export const StylesSummaryCard = styled.div`
   background-color: white;
-  padding: 1.5rem;
+  height: 70px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding: 5px;
 `
 
 export const StylesSummaryTitle = styled.h3`
@@ -96,19 +97,15 @@ export const StylesSummaryValue = styled.p`
 `
 
 export const StylesAddButton = styled.button`
-width: 75px;
-  background-color: #28a745;
-  color: white;
+width: 85px;
+color: white;
   border: none;
-padding: 0.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 4px;
   cursor: pointer;
-  transition: all 0.3s;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-
+  transition: background-color 0.3s;
+  margin-left: 1rem;
+  background-color: #218838;
   &:hover {
     background-color: #218838;
     transform: translateY(-2px);
